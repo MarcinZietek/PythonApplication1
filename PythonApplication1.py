@@ -1,11 +1,14 @@
+sum = 0
 
-list = ["W", "czasie", "suszy", "szosa", "sucha"]
-file = open("lista_slow.txt", "w", encoding = "utf-8")
+file = open("numbers.txt", "r", encoding = "utf-8")
 
-for word in list:
-    file.write(word + "\n")
-    print(word)
+for numbers in file:
+    print("Liczby", numbers)
+    number = int(numbers)
+    sum += number
+    
+  
 file.close()
 
-print("Slowa zostaly zapisane")
+print("Suma z liczb w pliku wynosi = " ,sum)
 
