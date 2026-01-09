@@ -1,14 +1,14 @@
 sum = 0
 
-file = open("numbers.txt", "r", encoding = "utf-8")
+file1 = open("numbers.txt", "r", encoding = "utf-8")
+file2 = open("pusty_numbers.txt", "w", encoding = "utf-8")
 
-for numbers in file:
-    print("Liczby", numbers)
-    number = int(numbers)
-    sum += number
-    
+for line in file1:
+    file2.write(line)   
+    print("Liczby", line)
   
-file.close()
+file1.close()
+file2.close()
 
-print("Suma z liczb w pliku wynosi = " ,sum)
+print("Plik skopiowany")
 
