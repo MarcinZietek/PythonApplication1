@@ -1,6 +1,0 @@
-Imie: Marcin
-Nazwisko: Zietek
-Wiek: 45
-Imie: Marcel
-Nazwisko: Proust
-Wiek: 78

@@ -11,18 +11,16 @@ while True:
     verification = input("Czy zatwierdzic? (t/n)")
 
     if verification == "t":
-        file1.write("Imie: " + name + "\n")
-        file1.write("Nazwisko: " + surname + "\n")
-        file1.write("Wiek: " + age + "\n")
-        print("Dane zostaly zapisane do pliku\n")
+        print("Imie: " + name + "\n")
+        print("Nazwisko: " + surname + "\n")
+        print("Wiek: " + age + "\n")
     else:
         print("Anulowano!\n")
 
-    nextData = input("Czy dodac kolejnego uzytkownika? (t/n)")
-    if nextData != "t":
+    nextData = input("Czy zakonczyc wyswietlanie danych uzytkownika? (t/n)")
+    if nextData != "n":
         break
 
-file1.close()
 
 
 
