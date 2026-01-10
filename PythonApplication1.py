@@ -1,29 +1,16 @@
-#Najpierw utwórz zmienn¹ o nazwie x i przypisz jej wartoœæ 10
-x = 10
+text = input ("Podaj tekst: ")
 
-#Nastêpnie utwórz drug¹ zmienn¹ y i przypisz jej wartoœæ 55
-y = 55
+vowel = "aeiouyAEIOUY"
+vowelCounter = 0
+consonantCounter = 0
 
-#Utwórz zmienn¹ z i przypisz jej wartoœæ x + y
-z = x + y
+for letter in text:
+    if letter.isalpha():
+        if letter in vowel:
+            vowelCounter += 1
+        else:
+            consonantCounter += 1
 
-#Zast¹p x wartoœci¹ z
-x = z
+print("Lczba samoglosek: ", vowelCounter,"\n")
+print("Lczba spolglosek: ", consonantCounter,"\n")
 
-#Wydrukuj wartoœæ x
-print(x)
-
-#Rodzaje zmiennych
-a = 10
-b = 3,14
-c = "zmienna"
-d = True
-e = [1,2,3]
-f = (1,2)
-g = {"x":1,"y":2}
-h = None
-
-variables = [a,b,c,d,e,f,g,h]
-
-for z in variables:
-    print(type(z))
