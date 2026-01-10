@@ -1,20 +1,30 @@
-file1 = open("raw.txt", "r", encoding = "utf-8")
-file2 = open("new_raw.txt", "w", encoding = "utf-8")
 
-for line in file1:  
-    print("Plik z pustymi liniami", line)
-    if line.strip():
-       file2.write(line)
+file1 = open("dane_uzytkownika.txt", "w", encoding = "utf-8")
+
+while True:
+    name = input("Podaj imie: ")
+    surname = input("Podaj nazwisko: ")
+    age = input("Podaj wiek: ")
+
+    print("Wprowadzone dane: ",name,surname,age)
+
+    verification = input("Czy zatwierdzic? (t/n)")
+
+    if verification == "t":
+        file1.write("Imie: " + name + "\n")
+        file1.write("Nazwisko: " + surname + "\n")
+        file1.write("Wiek: " + age + "\n")
+        print("Dane zostaly zapisane do pliku\n")
+    else:
+        print("Anulowano!\n")
+
+    nextData = input("Czy dodac kolejnego uzytkownika? (t/n)")
+    if nextData != "t":
+        break
 
 file1.close()
-file2.close()
-print("Usunieto puste linie w pliku")
 
-file2 = open("new_raw.txt", "r", encoding = "utf-8")
-for line1 in file2:
-    print("Plik bez pustych linii ", line1)  
 
-file2.close()
 
 
 
