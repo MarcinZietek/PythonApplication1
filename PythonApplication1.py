@@ -1,5 +1,4 @@
 
-file1 = open("dane_uzytkownika.txt", "w", encoding = "utf-8")
 
 while True:
     name = input("Podaj imie: ")
